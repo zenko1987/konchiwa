@@ -1,0 +1,215 @@
+{% extends 'Base/base.html' %}
+
+{% block content %}
+
+     
+     {% load static %}
+    {% block extrahead %}
+      <link rel= "stylesheet" href= "{% static 'religion_style.css' %}">
+    {% endblock %}
+     
+     (English)     
+      <div class = "a4"><p>Comparative Study of Religion</P></div>
+      
+
+{# ------------HR------------- #}
+      
+      <div class = "journal">
+          <div class = "image">
+          {% for journal in journals %}
+              {% if 'HR' in journal.journal_ID %}
+              <br>
+          <a href="{{ journal.URL }}" target="_blank"><img src="{{ journal.image }}" alt={{journal.journal}} width="135" height="200">
+            </a>
+              </div>   
+         <p>
+          <h3><a href="{{ journal.URL }}" target="_blank" style="text-decoration:none;">
+          <i>{{journal.journal}}</i>&nbsp&nbsp<span class="pub">{{ journal.publisher }}</span>
+              </a>
+            </h3>
+               {% endif %} 
+             {% endfor %}
+          <ul>
+            {% for article in articles %}  
+              {% if 'HR' in article.journal_ID %}
+            <li><a href="{{ article.URL }}" target="_blank" style="text-decoration:none;">{{article.article}}</a>&nbsp&nbsp&nbsp&nbsp<a href=https://scholar.google.co.jp/scholar?hl=ja&as_sdt=0%2C5&q="{{ article.author.split|join:'+' }}" target="_blank" style="text-decoration:none;"><span class="author">({{ article.author }})</span></a></li> 
+              {% endif %}
+            {% endfor %}
+            </ul>
+        
+          </p>
+    </div>  
+  
+
+
+  
+{# -----------NU-------------- #}
+        
+    <div class = "journal">
+          <div class = "image">
+          {% for journal in journals %}
+              {% if 'NU' in journal.journal_ID %}
+              <br>
+          <a href="{{ journal.URL }}" target="_blank"><img src="{{ journal.image }}" alt={{journal.journal}} width="135" height="200">
+            </a>
+              </div>   
+         <p>
+          <h3><a href="{{ journal.URL }}" target="_blank" style="text-decoration:none;">
+          <i>{{journal.journal}}</i>&nbsp&nbsp<span class="pub">{{ journal.publisher }}</span>
+              </a>
+            </h3>
+               {% endif %} 
+             {% endfor %}
+          <ul>
+            {% for article in articles %}  
+              {% if 'NU' in article.journal_ID %}
+            <li><a href="{{ article.URL }}" target="_blank" style="text-decoration:none;">{{article.article}}</a>&nbsp&nbsp&nbsp&nbsp<a href=https://scholar.google.co.jp/scholar?hl=ja&as_sdt=0%2C5&q="{{ article.author.split|join:'+' }}" target="_blank" style="text-decoration:none;"><span class="author">({{ article.author }})</span></a></li> 
+              {% endif %}
+            {% endfor %}
+            </ul>
+        
+          </p>
+   </div>
+ 
+{# ------------Reli------------- #}
+    
+    
+    <div class = "journal">
+        <div class = "image">
+      {% for journal in journals %}
+          {% if 'Reli' in journal.journal_ID %}
+      <br>
+      <a href="{{ journal.URL }}" target="_blank"><img src="{{ journal.image }}" alt={{journal.journal}} width="135"
+    height="200">
+          </a>
+      </div>
+     <p>
+      <h3><a href="{{ journal.URL }}" target="_blank" style="text-decoration:none;">
+          <i>{{journal.journal}}</i>&nbsp&nbsp<span class="pub">{{ journal.publisher }}</span>
+          </a>
+        </h3>
+       {% endif %} 
+          {% endfor %}
+      <ul>
+       {% for article in articles %}  
+          {% if 'Reli' in article.journal_ID %}
+           <li><a href="{{ article.URL }}" target="_blank" style="text-decoration:none;">{{article.article}}</a>&nbsp&nbsp&nbsp&nbsp<a href=https://scholar.google.co.jp/scholar?hl=ja&as_sdt=0%2C5&q="{{ article.author.split|join:'+' }}" target="_blank" style="text-decoration:none;"><span class="author">({{ article.author }})</span></a></li> 
+           {% endif %}
+       {% endfor %}
+      </ul>
+          </p>
+    </div>
+
+{# -----------CRR-------------- #}
+
+ <div class = "journal">
+        <div class = "image">
+      {% for journal in journals %}
+          {% if 'CRR' in journal.journal_ID %}
+      <br>
+      <a href="{{ journal.URL }}" target="_blank"><img src="{{ journal.image }}" alt={{journal.journal}} width="135"
+    height="200">
+          </a>
+     </div>
+     <p>
+      <h3><a href="{{ journal.URL }}" target="_blank" style="text-decoration:none;">
+          <i>{{journal.journal}}</i>&nbsp&nbsp<span class="pub">{{ journal.publisher }}</span>
+          </a>
+        </h3>
+       {% endif %} 
+          {% endfor %}
+      <ul>
+       {% for article in articles %}  
+          {% if 'CRR' in article.journal_ID %}
+            <li><a href="{{ article.URL }}" target="_blank" style="text-decoration:none;">{{article.article}}</a>&nbsp&nbsp&nbsp&nbsp<a href=https://scholar.google.co.jp/scholar?hl=ja&as_sdt=0%2C5&q="{{ article.author.split|join:'+' }}" target="_blank" style="text-decoration:none;"><span class="author">({{ article.author }})</span></a></li> 
+           {% endif %}
+       {% endfor %}
+      </ul>
+          </p>
+    </div>
+
+{# -----------MTSR-------------- #}
+    
+     <div class = "journal">
+          <div class = "image">
+          {% for journal in journals %}
+              {% if 'MTSR' in journal.journal_ID %}
+              <br>
+          <a href="{{ journal.URL }}" target="_blank"><img src="{{ journal.image }}" alt={{journal.journal}} width="135" height="200">
+            </a>
+              </div>   
+         <p>
+          <h3><a href="{{ journal.URL }}" target="_blank" style="text-decoration:none;">
+          <i>{{journal.journal}}</i>&nbsp&nbsp<span class="pub">{{ journal.publisher }}</span>
+              </a>
+            </h3>
+               {% endif %} 
+             {% endfor %}
+          <ul>
+            {% for article in articles %}  
+              {% if 'MTSR' in article.journal_ID %}
+           <li><a href="{{ article.URL }}" target="_blank" style="text-decoration:none;">{{article.article}}</a>&nbsp&nbsp&nbsp&nbsp<a href=https://scholar.google.co.jp/scholar?hl=ja&as_sdt=0%2C5&q="{{ article.author.split|join:'+' }}" target="_blank" style="text-decoration:none;"><span class="author">({{ article.author }})</span></a></li> 
+              {% endif %}
+            {% endfor %}
+            </ul>
+        
+          </p>
+    </div>  
+
+{# ------------SHUKYO------------- #}
+      
+      <div class = "journal">
+          <div class = "image">
+          {% for journal in journals %}
+              {% if 'SHUKYO' in journal.journal_ID %}
+              <br>
+          <a href="{{ journal.URL }}" target="_blank"><img src="{{ journal.image }}" alt={{journal.journal}} width="135" height="200">
+            </a>
+              </div>   
+         <p>
+          <h3><a href="{{ journal.URL }}" target="_blank" style="text-decoration:none;">
+          <i>{{journal.journal}}</i>&nbsp&nbsp<span class="pub">{{ journal.publisher }}</span>
+              </a>
+            </h3>
+               {% endif %} 
+             {% endfor %}
+          <ul>
+            {% for article in articles %}  
+              {% if 'SHUKYO' in article.journal_ID %}
+           <li><a href="{{ article.URL }}" target="_blank" style="text-decoration:none;">{{article.article}}</a>&nbsp&nbsp&nbsp&nbsp<a href=https://scholar.google.co.jp/scholar?hl=ja&as_sdt=0%2C5&q="{{ article.author.split|join:'+' }}" target="_blank" style="text-decoration:none;"><span class="author">({{ article.author }})</span></a></li> 
+              {% endif %}
+            {% endfor %}
+            </ul>
+        
+          </p>
+    </div>  
+
+{# ------------SHU_SYA------------- #}
+      
+      <div class = "journal">
+          <div class = "image">
+          {% for journal in journals %}
+              {% if 'SHU_SYA' in journal.journal_ID %}
+              <br>
+          <a href="{{ journal.URL }}" target="_blank"><img src="{{ journal.image }}" alt={{journal.journal}} width="135" height="200">
+            </a>
+              </div>   
+         <p>
+          <h3><a href="{{ journal.URL }}" target="_blank" style="text-decoration:none;">
+          <i>{{journal.journal}}</i>&nbsp&nbsp<span class="pub">{{ journal.publisher }}</span>
+              </a>
+            </h3>
+               {% endif %} 
+             {% endfor %}
+          <ul>
+            {% for article in articles %}  
+              {% if 'SHU_SYA' in article.journal_ID %}
+            <li><a href="{{ article.URL }}" target="_blank" style="text-decoration:none;">{{article.article}}</a>&nbsp&nbsp&nbsp&nbsp<a href=https://scholar.google.co.jp/scholar?hl=ja&as_sdt=0%2C5&q="{{ article.author.split|join:'+' }}" target="_blank" style="text-decoration:none;"><span class="author">({{ article.author }})</span></a></li> 
+              {% endif %}
+            {% endfor %}
+            </ul>
+        
+          </p>
+    </div>  
+
+     {% endblock %}

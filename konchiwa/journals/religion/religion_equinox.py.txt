@@ -1,0 +1,21 @@
+def JCSR_paper_titles():
+    #Routledge religion
+    url = "https://www.tandfonline.com/toc/rrel20/current"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0",
+        }
+    HP = requests.get(url, headers=headers)
+    soup = BeautifulSoup(HP.text, 'lxml')
+    #ジャーナルタイトル
+    papers = soup.find(class_="title").string
+    
+    #論文タイトル
+    list = []
+    p_titles = soup.find_all(class_="header")
+    for p_title in p_titles:
+        aaa = p_title.getText()
+        if 'Article' in aaa:
+            Reli_titles = aaa.replace("Article",'').replace("\n","").strip(" ")
+            list.append(Reli_titles)
+    context = {"Reli":papers,"Reli_paper_titles":list,"Reli_url":url}
+    return (context)

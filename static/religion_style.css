@@ -1,0 +1,163 @@
+
+.a1 {
+  background-color:  #33CC66;　
+    background-size: contain;
+  height: 150px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+
+
+
+
+    h1 {color: #fff;
+        font-size: 40px;}
+    h1 .subtitle{
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .pub {
+        font-size: 15px;
+        font-weight: bold;
+        }
+
+    h2 {color: #32cd32;}
+    h3 {font-size:20px;}
+
+    
+.a2 {
+    padding-top: 30px;
+    padding-left: 30px;
+    background-color: #CCFF99;
+    background-size: contain;
+}
+
+
+
+
+.a3 {
+    font-size:18px;
+}
+
+
+.a4 {font-size:25px;
+     color: #1e90ff;
+     font-weight: bold;
+     border-bottom: solid 2px #1e90ff;
+}
+
+
+
+
+.a5 {font-size:25px;
+     color: #dc143c;
+     font-weight: bold;
+     border-bottom: solid 2px #dc143c;
+    }
+
+
+.journal {
+    overflow:hidden;
+   }
+
+
+.journal img {
+    float:left;
+    width: 135;
+    height: 200;
+    margin-right:40px;
+    
+    }
+
+.iamge {
+    float: left;
+    vertical-align: top;   
+}
+
+
+/* ホーム　*/
+.btn-top-radius {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 8px 10px 5px 10px;
+  text-decoration: none;
+  color: #FFA000;
+  background: #D9E5FF;
+  border-bottom: solid 4px #0066FF;
+  border-radius: 15px 15px 0 0;
+  transition: .4s;
+}
+
+.btn-top-radius:hover {
+  background: #ffc25c;
+  color: #FFF;
+}
+
+
+/* 宗教　*/
+.btn-top-religion {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 8px 10px 5px 10px;
+  text-decoration: none;
+  color: #FFA000;
+  background: #CCFF99;
+  border-bottom: solid 4px #33CC66;
+  border-radius: 15px 15px 0 0;
+  transition: .4s;
+}
+
+.btn-top-religion:hover {
+  background: #ffc25c;
+  color: #FFF;
+}
+
+
+
+
+/* 文化人類学　*/
+.btn-top-cul_anth {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 8px 10px 5px 10px;
+  text-decoration: none;
+  color: #FFA000;
+  background: #FFBEDA;
+  border-bottom: solid 4px #FF0000;
+  border-radius: 15px 15px 0 0;
+  transition: .4s;
+}
+
+.btn-top-religion:hover {
+  background: #ffc25c;
+  color: #FFF;
+}
+
+
+/* 
+table {
+    border-collapse: collapse;
+    border: collapse;
+}
+
+table tr,table td{
+    border: dashed 1px #FFCC00;
+    display: block;
+}
+　*/
+
+.footer {
+  background-color:  #33CC66;　
+    background-size: contain;
+  height: 5px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+    width: auto;
+}

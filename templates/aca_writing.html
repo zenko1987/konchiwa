@@ -1,0 +1,66 @@
+<!DOCTYPE>
+<html>
+ <head>
+  <meta charset = "utf-8">
+    <style>
+    a:link {color:#000000;}    /* unvisited link is black*/
+    a:visited {color:#000000;} /* visited link is black (reverse the color back to black)*/
+    a:hover {color:#fa8072;}   /* mouse over link (blue when mouse over)*/
+    a:active {color:#8b008b;}  /* selected link (blue in the split second which you loading the page.)*/
+　　　　</style>
+     
+  <title>KONCHIWA! for World's Researchers</title>
+  </head>
+    
+    <body>
+    {% load static %}
+    {% block extrahead %}
+      <link rel= "stylesheet" href= "{% static 'cul_anth.css' %}">
+    {% endblock %}
+
+<div class = "a1">
+    <h1 class= "h1">KONCHIWA! for World's Researchers
+  　 <span class="subtitle"><br>A Worldwide Library of Academic Articles for Making the Single Academic World</span>
+    　</h1>
+　　<div>
+      
+
+<a href="/" class="btn-top-radius">Philosophy</a><a href="/religion" class="btn-top-religion">Religion</a><a href="/cul_anthropology" class="btn-top-cul_anth">Cultural Anthropology</a><a href="/aca_writing/" class="btn-top-cul_anth">Academic Writing</a>
+      
+      
+　<div class = "a2">
+      <div class = "a3"><h2>May,2019</h2></div> (English)
+      <div class = "a4"><p>Comparative Study of Religion</P></div>
+      
+
+{# ------------CA------------- #}
+      
+      <div class = "journal">
+          <div class = "image">
+          {% for journal in journals %}
+              {% if 'CA' in journal.journal_ID %}
+              <br>
+          <a href="{{ journal.URL }}" target="_blank"><img src="{{ journal.image }}" alt={{journal.journal}} width="135" height="200">
+            </a>
+              </div>   
+         <p>
+          <h3><a href="{{ journal.URL }}" target="_blank" style="text-decoration:none;">
+          <i>{{journal.journal}}</i>&nbsp&nbsp<span class="pub">{{ journal.publisher }}</span>
+              </a>
+            </h3>
+               {% endif %} 
+             {% endfor %}
+          <ul>
+            {% for article in articles %}  
+              {% if 'CA' in article.journal_ID %}
+          <li><a href="{{ article.URL }}" target="_blank" style="text-decoration:none;">{{article.article}}</a></li> 
+              {% endif %}
+            {% endfor %}
+            </ul>
+        
+          </p>
+    </div>  
+  
+
+
+  
